@@ -19,3 +19,21 @@ print(f"\tTotal Price \t\t{total_price}")
 print("*" * 60)
 print(f"\t\t{company_message.upper()}")
 print("*" * 60)
+
+
+# Creation of a basic Arithmetic Calculator
+User_que = input("Dear user what calculation would you love to perform? Kindly input one of the following 'sum', 'div', 'mult' or 'sub': ")
+user_num1 = int(input("Kindly input the first number in integers: "))
+user_num2 = int(input("Kindly input the second number in integers: "))
+user_decision1, user_decision2, user_decision3, user_decision4 = "sum", "div", "mult", "sub"
+
+if User_que == "sum":
+    print( user_num1 + user_num2)
+elif User_que == "div":
+    print( user_num1 / user_num2)
+elif User_que == "mult":
+    print( user_num1 * user_num2)
+elif User_que == "sub":
+    print( user_num1 - user_num2)
+else:
+    print("Invalid arithmetic operation. Please try again")
