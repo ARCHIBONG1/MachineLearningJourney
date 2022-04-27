@@ -36,4 +36,4 @@ elif User_que == "mult":
 elif User_que == "sub":
     print( user_num1 - user_num2)
 else:
-    print("Invalid arithmetic operation. Please try again")
+    print("Invalid arithmetic operation")
