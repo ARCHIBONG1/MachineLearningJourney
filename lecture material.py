@@ -116,3 +116,72 @@ def change(aList):
 print(f"Before altering: {sports}" )
 change(sports)
 print( f"After Altering: {sports}")
+
+
+# Creating a shopping cart
+from IPython.display import clear_output  # imports additional functions
+
+# global list variable
+cart = []
+
+
+# creating a function for adding items to the cart
+def add_item(item):
+    clear_output()
+    cart.append(item)
+    print(f"{item}")
+
+
+# creating a function for removing items from a cart
+def remove_item(item):
+    clear_output()
+    try:
+        cart.remove(item)
+        print(f"{item} has been removed")
+    except:
+        print("Sorry we could not remove that item.")
+
+
+# creating a function that displays the cart
+def show_cart():
+    clear_output()
+    if cart:
+        print("Here is your cart: ")
+        for item in cart:
+            print(f"- {item}")
+    else:
+        print("Your cart is empty. ")
+
+
+# Claering the cart
+def clear_cart():
+    clear_output()
+    cart.clear()
+    print(" Your cart is empty.")
+
+
+# creating the main fuction loop
+def main():
+    done = False
+
+    while not done:
+        ans = input("Quit/add/remove/show/clear: ").lower()
+        if ans == "quit":  # Base Case
+            print("Thanks for using out program")
+            show_cart()
+            done = True
+        elif ans == "add":
+            item = input("What would you like to add? ").title()
+            add_item(item)
+        elif ans == "remove":
+            item = input("What would you like to remove? ").title()
+            remove_item(item)
+        elif ans == "show":
+            show_cart()
+        elif ans == "clear":
+            clear_cart()
+        else:
+            print("Sorry that was not an option. ")
+
+
+main()
