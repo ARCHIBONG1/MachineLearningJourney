@@ -37,3 +37,82 @@ elif User_que == "sub":
     print( user_num1 - user_num2)
 else:
     print("Invalid arithmetic operation")
+
+
+def Name(name):  # Defines the function
+    print(f"Hello {name}")  # States the operation of the function
+
+
+Name("Archibong")  # Calls the function
+# Using a function to square a series of numbers
+num1 = [56, 65, 54, 44, 3, 24, 24, 22, 43]
+def squares():
+    for num in nums:
+        print(num**2)
+
+
+# Testing out the args for tuples
+def outputData(name, *args):
+    print(type(args))
+    for arg in args:
+        print(arg)
+
+
+outputData("Archibong Goodluck", 5, True, "Jess")
+
+
+# Testing out the kwargs for dictionary
+def output(**kwargs):
+    print(type(kwargs))
+    print(kwargs["name"])
+    print(kwargs["num"])
+
+
+output(name="Archibong Goodluck", num=5, b=True)
+
+
+
+# Testing Tenary operator
+def search(aList, el):
+    return True if el in aList else False
+
+
+result = search( [ "one", 2, "three" ], 2)
+print(result)
+
+
+
+
+# Testing out Global scope1
+number = 4
+
+
+def scope_test():
+    number += 1 # Checking if the variable declared at a global scope is accessible within the function scope
+
+
+scope_test() # Outputs error
+
+
+# Testing out Global scope2
+number = 4
+
+
+def scope_test(number = 4 ):
+    number += 1 # Checking if the variable declared at a global scope is accessible within the function scope
+
+
+scope_test() # runs
+
+
+# changing list item values by index
+sports = [ "baseball", "football", "hockey", "basketball" ]
+
+
+def change(aList):
+    aList[ 0 ] = "Soccer"
+
+
+print(f"Before altering: {sports}" )
+change(sports)
+print( f"After Altering: {sports}")
