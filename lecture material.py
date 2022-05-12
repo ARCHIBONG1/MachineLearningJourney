@@ -184,4 +184,40 @@ def main():
             print("Sorry that was not an option. ")
 
 
-main()
+# Working with Classes
+class Car():  # Declares a class
+    sound1, sound2 = "Beep", "Honk"  # Assigns attribute
+    colour1, colour2 = "Red", "Blue"
+
+    def _init_(self, sound3, colour3):  # Dec;lares attribute 3 using the init method
+        self.sound3 = sound3
+        self.colour3 = colour3
+
+
+print(Car1.sound1, Car1.colour1)  # prints the attributes of first instance: Note that the class wasnt first called
+Car2 = Car() # Calls a second instance of the class
+print(Car2.sound2, Car2.colour2) # Prints the attributes of second instance
+Car2.sound2, Car.colour2 = "Beep", "Red" # Changes the attributes
+print(Car2.sound2, Car.colour2) # Prints our attribute change
+Car3 = Car("pipi", "black") # Declares a third instance of the class Car using personalised attribute courtesy of the init method
+print(Car3.sound3)
+
+
+class dog():  # Declares the class
+    sound = "bark"  # Creates an attribute called sound
+
+    def make_sound():  # static method
+        print("bark")  #
+
+    def make_sound_2(self):  # instance method
+        print(self.sound)
+
+    def show_age(self, age):
+        print(age)
+
+
+sam.make_sound()  # runs without being instantiated due to static method
+sam = dog()
+sam.make_sound2()  # only runs because the an instance of the class had been called
+sam = dog()
+sam.show_age(6)
